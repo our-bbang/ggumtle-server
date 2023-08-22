@@ -1,0 +1,19 @@
+{
+  "name": "ggumtle_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dot-env": "^0.0.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "openai": "^3.3.0",
+    "pm2": "^5.3.0"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/dbe9ee1c-47d2-4eea-aa5e-02edddecf67a/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/ggumtle-server",
+  "appService.deploySubpath": "."
+}
