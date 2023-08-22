@@ -230,6 +230,10 @@ app.get("/ask/report", async (req, res) => {
   }
 });
 
+app.get("/test", async (req, res) => {
+  res.send("hello world");
+});
+
 app.listen(port, () => {
   console.log("Server on: " + port);
 });
