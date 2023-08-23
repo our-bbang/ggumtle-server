@@ -215,6 +215,7 @@ app.get("/ask/report", async (req, res) => {
 
   if (response) {
     const user = JSON.parse(response); // json.parse로 파싱
+    res.setHeader("Access-Control-Allow-Credentials", true);
     res.send(user);
     // res.setHeader("Access-Control-Allow-origin", "*");
     // res.setHeader("Access-Control-Allow-Credentials", "true");
