@@ -210,18 +210,17 @@ app.get("/ask/report", async (req, res) => {
     필요한 메인 키워드 4개와 각각의 메인 키워드를 이루기 위한 
     세부 목표를 4개씩 한글로 json형태로 생성해줘`;
 
-  const allowedOrigins = ["http://localhost:3000, https://ggumtle.vercel.app"];
-  const origin = req.headers.origin;
+  // const allowedOrigins = ["http://localhost:3000, https://ggumtle.vercel.app"];
+  // const origin = req.headers.origin;
 
   const response = await runGPT35(propmt_sentence);
-  const response_s = response.content;
 
   if (response) {
     const user = JSON.parse(response); // json.parse로 파싱
     res.setHeader("Access-Control-Allow-origin", req.headers.origin);
     res.setHeader("Content-Type", 'application/json; charset="utf-8"');
     res.setHeader("Access-Control-Allow-Credentials", true);
-    res.json({ response: response });
+    res.json(user);
     console.log(user.BucketList.MainKeyword1.Value);
     console.log(user.BucketList.MainKeyword1.Details.Detail1);
   } else {
