@@ -221,16 +221,9 @@ app.get("/ask/report", async (req, res) => {
     res.setHeader("Access-Control-Allow-origin", req.headers.origin);
     res.setHeader("Content-Type", 'application/json; charset="utf-8"');
     res.setHeader("Access-Control-Allow-Credentials", true);
-    res.send(user);
-    // res.setHeader("Access-Control-Allow-origin", "*");
-    // res.setHeader("Access-Control-Allow-Credentials", "true");
-    //res.json(user);
+    res.json({ response: response });
     console.log(user.BucketList.MainKeyword1.Value);
     console.log(user.BucketList.MainKeyword1.Details.Detail1);
-    // console.log(response_s.BucketList.MainKeyword1.Value);
-    // console.log(response_s.BucketList.MainKeyword1.Details.Detail1);
-
-    // res.json({ response: response_s });
   } else {
     res.status(500).json({ error: "fail......" });
   }
